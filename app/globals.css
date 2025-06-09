@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210, 20%, 96%; /* #F1F5F9 */
+    --foreground: 222, 84%, 12%; /* #0F172A */
+
+    --muted: 210, 40%, 98%; /* #F8FAFC */
+    --muted-foreground: 215, 25%, 46%; /* #475569 */
+
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 222.22, 47.37%, 11.18%;
+
+    --card: 0, 0%, 100%; /* #FFFFFF */
+    --card-foreground: 222, 84%, 12%; /* #0F172A */
+
+    --border: 214, 32%, 91%; /* #E2E8F0 */
+    --input: 214, 32%, 91%; /* #E2E8F0 */
+
+    --primary: 343.73, 100%, 46.27%;
+    --primary-foreground: 0, 0%, 100%;
+
+    --secondary: 210, 40%, 98%; /* #F8FAFC */
+    --secondary-foreground: 222, 84%, 12%; /* #0F172A */
+
+    --accent: 210, 20%, 96%; /* #F1F5F9 */
+    --accent-foreground: 222, 84%, 12%; /* #0F172A */
+
+    --destructive: 0, 84%, 60%; /* #EF4444 */
+    --destructive-foreground: 0, 0%, 100%; /* #FFFFFF */
+
+    --ring: 345, 100%, 47%; /* #EC0040 */
+
+    --radius: 0.5rem;
+
+    /* Custom variables for our design */
+    --sidebar-background: 0, 0%, 100%; /* #FFFFFF */
+    --topnav-background: 345, 100%, 47%; /* #EC0040 */
+  }
+
+  .dark {
+    /* Keep dark mode variables but they won't be used */
+    --background: 241 245 249;
+    --foreground: 15 23 42;
+    --muted: 248 250 252;
+    --muted-foreground: 71 85 105;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --primary: 236 0 64;
+    --primary-foreground: 255 255 255;
+    --secondary: 248 250 252;
+    --secondary-foreground: 15 23 42;
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --ring: 236 0 64;
+    --sidebar-background: 255 255 255;
+    --topnav-background: 236 0 64;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Ensure consistent text colors */
+  .text-muted-foreground {
+    @apply text-slate-600;
+  }
+
+  /* Override any gray text to use slate for consistency */
+  .text-gray-500 {
+    @apply text-slate-600;
+  }
+
+  .text-gray-600 {
+    @apply text-slate-700;
+  }
+
+  .text-gray-700 {
+    @apply text-slate-800;
+  }
+
+  .text-gray-900 {
+    @apply text-slate-900;
+  }
+}
